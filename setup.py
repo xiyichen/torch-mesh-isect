@@ -58,7 +58,7 @@ else:
 bvh_src_files = ['src/bvh.cpp', 'src/bvh_cuda_op.cu']
 bvh_include_dirs = torch.utils.cpp_extension.include_paths() + [
     'include',
-    osp.expandvars('$CUDA_SAMPLES_INC')]
+    '/usr/local/cuda-10.0/samples/common/inc']
 
 bvh_extra_compile_args = {'nvcc': ['-DPRINT_TIMINGS=0', '-DDEBUG_PRINT=0',
                                    '-DERROR_CHECKING=1',
